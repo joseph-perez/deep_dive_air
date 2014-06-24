@@ -3,9 +3,126 @@
 body {
     max-width: 1000px;
     margin: 0 auto;
-    background-image: url('../img/white_carbon_copy.png');
+    background-color: #00ACFF;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 1.000em;
+    line-height: 1.5em;
 }
 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding 0;
+    float: right;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    padding: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/*  index page custom styles  ============================================================ */ 
+
+h1 {
+    font-weight: 100;
+    text-align: center;
+}
+
+section div {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin: 70px 0;
+}
+
+
+
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  GROUPING  ============================================================================= */
+
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+/*  GRID OF THREE   ============================================================================= */
+
+	
+.span_3_of_3 {
+	width: 100%; 
+}
+
+.span_2_of_3 {
+	width: 66.13%; 
+}
+
+.span_1_of_3 {
+	width: 32.26%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span_3_of_3 {
+		width: 100%; 
+	}
+	.span_2_of_3 {
+		width: 100%; 
+	}
+	.span_1_of_3 {
+		width: 100%;
+	}
+}
 
 
 
