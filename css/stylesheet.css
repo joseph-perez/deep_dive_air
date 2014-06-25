@@ -32,6 +32,12 @@ nav a:hover {
 
 input {
     text-align: center;
+    background-color: #00ACFF;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    outline: none;
+    padding-top: 20px;
+    width: 200px;
 }
 
 input::-webkit-input-placeholder {
@@ -66,10 +72,25 @@ input:-ms-input-placeholder {
     font-size: 1.125em;
 }
 
+button {
+    background-color: #00ACFF;
+    color: #FFFFFF;
+    margin-top: 20px;
+    height: 40px;
+    width: 100px;
+    outline: none;
+    border: 1px solid #FFFFFF;
+}
+
 button:active {
     transform: translate(0px, 2px);
     -ms-transform: translate(0px, 2px);
     -webkit-transform: translate(0px, 2px);
+}
+
+button:hover {
+    color: #00ACFF;
+    background-color: #FFFFFF;
 }
 
 /*  index page custom styles  ============================================================ */ 
@@ -91,29 +112,37 @@ footer {
 
 #loginForm {
     text-align: center;
-    margin-top: 100px;;
+    margin-top: 100px;
 }
 
-.loginInput {
-    background-color: #00ACFF;
-    border: none;
-    border-bottom: 1px solid #FFFFFF;
-    outline: none;
-    padding-top: 20px;
-    width: 200px;
+/*  sign up page custom styles  ============================================================================= */
+
+fieldset {
+    border-color: #FFFFFF;
+    text-align: center;
+    width: 550px;
+    margin: 0 auto;
 }
 
-#loginButton {
+#signUpButton {
+    margin-left: 490px;
+}
+
+select {
     background-color: #00ACFF;
-    color: #FFFFFF;
-    margin-top: 20px;
-    height: 40px;
-    width: 100px;
+    font-weight: 100;
     outline: none;
     border: 1px solid #FFFFFF;
+    margin-top: 15px;
 }
 
-#loginButton:hover {
-    color: #00ACFF;
-    background-color: #FFFFFF;
-}
+/*  search page custom styles  ============================================================================= */
+
+
+
+
+
+
+
+
+
