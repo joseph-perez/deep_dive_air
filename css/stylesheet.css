@@ -24,10 +24,12 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
+    padding: 10px 5px;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav ul li a:hover {
+    color: #00ACFF;
+    background-color: #FFFFFF;
 }
 
 input {
@@ -93,6 +95,11 @@ button:hover {
     background-color: #FFFFFF;
 }
 
+form {
+    text-align: center;
+    margin-top: 100px;
+}
+
 /*  index page custom styles  ============================================================ */ 
 
 h1 {
@@ -108,11 +115,18 @@ footer {
     text-align: center;
 }
 
-/*  login page custom styles  ============================================================================= */
+/*  login page page custom styles  ============================================================================= */
 
-#loginForm {
-    text-align: center;
-    margin-top: 100px;
+#loginPassword {
+    margin-right: 100px;
+}
+
+#loginEmail {
+    margin-right: 70px;
+}
+
+.loginLabel {
+    padding-right: 25px;
 }
 
 /*  sign up page custom styles  ============================================================================= */
@@ -134,6 +148,63 @@ select {
     outline: none;
     border: 1px solid #FFFFFF;
     margin-top: 15px;
+}
+
+
+#contactNameLabel {
+    padding-right: 25px;
+}
+
+#lastName {
+    margin-right: 50px;
+}
+
+#contactEmail {
+    margin-right: 147px;
+}
+
+#contactEmailLabel {
+    padding-right: 130px;
+}
+
+#contactPhoneLabel {
+    padding-right: 60px;
+}
+
+#signUpPhoneNumber {
+    margin-right: 145px;
+}
+
+#profileEmailLabel {
+    padding-right:125px;
+}
+
+#profileEmail {
+    margin-right: 145px;
+}
+
+#profilePasswordLabel {
+    padding-right: 95px;
+}
+
+#signUpPassword {
+    margin-right:147px;
+}
+
+#confirmPasswordLabel {
+    padding-right: 40px;
+}
+
+#confirmSignUpPassword {
+    margin-right: 147px;
+}
+
+#dateOfBirthLabel {
+    padding-right: 55px;
+}
+
+#yearSelect {
+    margin-right: 125px;
 }
 
 /*  search page custom styles  ============================================================================= */
