@@ -2,11 +2,16 @@
 <html>
     <head>
         <title>Deep Dive Air | Sign Up</title>
-        <meta charset="UTF-8">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://malsup.github.com/jquery.form.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/additional-methods.min.js"></script>
+        <script src="" type="text/javascript"></script>
         <link rel="stylesheet" href="css/normalize.css" type="text/css"/>
         <link rel="stylesheet" href="css/simplegrid.css" type="text/css"/>
         <link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
         <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+        <meta charset="UTF-8"/>
     </head>
     <body class="grid grid-pad">
         <header class="grid grid-pad">
@@ -27,18 +32,27 @@
         </header>
         <div class="grid grid-pad">
             <div class="col-1-1">
+                
                 <fieldset name="contactInfo">
                     <legend>Contact Information</legend>
+                    <label for="firstName" id="contactNameLabel">Name</label>
                     <input type="text" name="firstName" id="firstName" placeholder="First Name"/>
                     <input type="text" name="lastName" id="lastName" placeholder="Last Name"/><br/>
-                    <input type="email" name="signUpEmail" id="signUpEmail" placeholder="Email"/><br/>
+                    <label for="contactEmail" id="contactEmailLabel">Email</label>
+                    <input type="email" name="contactEmail" id="contactEmail" placeholder="Email"/><br/>
+                    <label for="signUpPhoneNumber" id="contactPhoneLabel">Phone Number</label>
                     <input type="text" name="signUpPhoneNumber" id="signUpPhoneNumber" placeholder="Phone Number"/>
                 </fieldset>
+                
                 <fieldset name="profileInfo">
                     <legend>Profile Information</legend>
-                    <input type="text" name="signUpUsername" id="signUpUsername" placeholder="Username"/><br/>
+                    <label for="profileEmail" id="profileEmailLabel">Email</label>
+                    <input type="email" name="profileEmail" id="profileEmail" placeholder="Email"/><br/>
+                    <label for="signUpPassword" id="profilePasswordLabel">Password</label>
                     <input type="password" name="signUpPassword" id="signUpPassword" placeholder="Password"/><br/>
+                    <label for="confirmSignUpPassword" id="confirmPasswordLabel">Confirm Password</label>
                     <input type="password" name="confirmSignUpPassword" id="confirmSignUpPassword" placeholder="Confirm Password"/><br/>
+                    <label id="dateOfBirthLabel">Date of Birth</label>
                     <select name="dateOfBirthMonth">
                         <option>Month</option>
                         <option value="January">January</option>
@@ -53,6 +67,7 @@
                         <option value="November">November</option>
                         <option value="December">December</option>
                     </select>
+                    
                     <select name="dateOfBirthDay">
                         <option>Day</option>
                         <option value="1">1</option>
@@ -87,7 +102,8 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
-                    <select name="dateOfBirthYear">
+                    
+                    <select name="dateOfBirthYear" id="yearSelect">
                         <option>Year</option>
                         <option value="2014">2014</option>
                         <option value="2013">2013</option>
@@ -207,6 +223,7 @@
                     </select>
                 </fieldset>
                 <button type="submit" id="signUpButton">Sign Up</button>
+                
             </div>
         </div>
     </body>
