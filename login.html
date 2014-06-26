@@ -2,11 +2,16 @@
 <html>
     <head>
         <title>Deep Dive Air | Login</title>
-        <meta charset="UTF-8">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://malsup.github.com/jquery.form.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/additional-methods.min.js"></script>
+        <script src="" type="text/javascript"></script>
         <link rel="stylesheet" href="css/normalize.css" type="text/css"/>
         <link rel="stylesheet" href="css/simplegrid.css" type="text/css"/>
         <link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
         <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+        <meta charset="UTF-8"/>
     </head>
     <body class="grid grid-pad">
         <header class="grid grid-pad">
@@ -26,10 +31,11 @@
             
         </header>
         <div class="grid grid-pad">
-            
             <form class="col-1-1"id="loginForm">
-                <input class="loginInput" type="email" name="loginEmail" id="loginEmail" placeholder="Email"/><br/>
-                <input class="loginInput" type="password" name="loginPassword" id="loginPassword" placeholder="Password"/><br/>
+                <label for="loginEmail" class="loginLabel">Email</label>
+                <input type="email" name="loginEmail" id="loginEmail" placeholder="Email"/><br/>
+                <label for="loginPassword" class="loginLabel">Password</label>
+                <input type="password" name="loginPassword" id="loginPassword" placeholder="Password"/><br/>
                 <button type="submit" id="loginButton">Log In</button>
             </form>
             
