@@ -11,7 +11,7 @@ body {
 nav ul {
     list-style: none;
     margin: 0;
-    padding 0;
+    padding: 0;
     float: right;
     margin-top: 20px;
 }
@@ -74,6 +74,11 @@ input:-ms-input-placeholder {
     font-size: 1.125em;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #00ACFF inset;
+    -webkit-text-fill-color: #FFFFFF;
+}
+
 button {
     background-color: #00ACFF;
     color: #FFFFFF;
@@ -98,6 +103,10 @@ button:hover {
 form {
     text-align: center;
     margin-top: 100px;
+}
+
+.outputArea {
+    text-align: center;
 }
 
 /*  index page custom styles  ============================================================ */ 
@@ -133,13 +142,13 @@ footer {
 
 fieldset {
     border-color: #FFFFFF;
-    text-align: center;
+    text-align: left;
     width: 550px;
     margin: 0 auto;
 }
 
-#signUpButton {
-    margin-left: 490px;
+legend {
+    text-align: center;
 }
 
 select {
@@ -148,8 +157,12 @@ select {
     outline: none;
     border: 1px solid #FFFFFF;
     margin-top: 15px;
+    text-align: left;
 }
 
+#signUpForm {
+    margin-top: 0px;
+}
 
 #contactNameLabel {
     padding-right: 25px;
@@ -209,7 +222,13 @@ select {
 
 /*  search page custom styles  ============================================================================= */
 
-
+ #departureDate {
+    padding-right: 10px;
+ }
+ 
+ #flightYear {
+    margin-right: 100px;
+ }
 
 
 
