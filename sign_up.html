@@ -6,14 +6,14 @@
         <script src="http://malsup.github.com/jquery.form.js"></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/additional-methods.min.js"></script>
-        <script src="" type="text/javascript"></script>
+        <script src="js/form_validation.js" type="text/javascript"></script>
         <link rel="stylesheet" href="css/normalize.css" type="text/css"/>
         <link rel="stylesheet" href="css/simplegrid.css" type="text/css"/>
         <link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
         <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
         <meta charset="UTF-8"/>
     </head>
-    <body class="grid grid-pad">
+    <body>
         <header class="grid grid-pad">
             
             <div class="col-4-12">
@@ -31,10 +31,9 @@
             
         </header>
         <div class="grid grid-pad">
-            <div class="col-1-1">
-                
-                <fieldset name="contactInfo">
-                    <legend>Contact Information</legend>
+            <form id="signUpForm" class="col-1-1" method="post" action="php/sign_up_validation.php">
+                <fieldset name="signUpInfo">
+                    <legend>Sign Up Information</legend>
                     <label for="firstName" id="contactNameLabel">Name</label>
                     <input type="text" name="firstName" id="firstName" placeholder="First Name"/>
                     <input type="text" name="lastName" id="lastName" placeholder="Last Name"/><br/>
@@ -42,43 +41,39 @@
                     <input type="email" name="contactEmail" id="contactEmail" placeholder="Email"/><br/>
                     <label for="signUpPhoneNumber" id="contactPhoneLabel">Phone Number</label>
                     <input type="text" name="signUpPhoneNumber" id="signUpPhoneNumber" placeholder="Phone Number"/>
-                </fieldset>
-                
-                <fieldset name="profileInfo">
-                    <legend>Profile Information</legend>
-                    <label for="profileEmail" id="profileEmailLabel">Email</label>
-                    <input type="email" name="profileEmail" id="profileEmail" placeholder="Email"/><br/>
                     <label for="signUpPassword" id="profilePasswordLabel">Password</label>
                     <input type="password" name="signUpPassword" id="signUpPassword" placeholder="Password"/><br/>
                     <label for="confirmSignUpPassword" id="confirmPasswordLabel">Confirm Password</label>
                     <input type="password" name="confirmSignUpPassword" id="confirmSignUpPassword" placeholder="Confirm Password"/><br/>
                     <label id="dateOfBirthLabel">Date of Birth</label>
-                    <select name="dateOfBirthMonth">
-                        <option>Month</option>
-                        <option value="January">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="June">June</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="November">November</option>
-                        <option value="December">December</option>
+                    
+                    <select name="dateOfBirthMonth" id="dateOfBirthMonth">
+                        <option value="">Month</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
                     </select>
                     
                     <select name="dateOfBirthDay">
-                        <option>Day</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
+                        <option value="">Day</option>
+                        <option value="01">1</option>
+                        <option value="02">2</option>
+                        <option value="03">3</option>
+                        <option value="04">4</option>
+                        <option value="05">5</option>
+                        <option value="06">6</option>
+                        <option value="07">7</option>
+                        <option value="08">8</option>
+                        <option value="09">9</option>
                         <option value="10">10</option>
                         <option value="11">11</option>
                         <option value="12">12</option>
@@ -103,8 +98,8 @@
                         <option value="31">31</option>
                     </select>
                     
-                    <select name="dateOfBirthYear" id="yearSelect">
-                        <option>Year</option>
+                    <select name="dateOfBirthYear" id="yearSelect" class="required">
+                        <option value="">Year</option>
                         <option value="2014">2014</option>
                         <option value="2013">2013</option>
                         <option value="2012">2012</option>
@@ -223,8 +218,9 @@
                     </select>
                 </fieldset>
                 <button type="submit" id="signUpButton">Sign Up</button>
+            </form>
+            <div id="signUpOutputArea" class="outputArea"></div>
                 
-            </div>
         </div>
     </body>
 </html>
